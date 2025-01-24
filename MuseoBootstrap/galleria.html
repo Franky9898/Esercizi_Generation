@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Galleria</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" href="stile.css">
+    </head>
+
+    <body>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+            </script>
+
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Menu</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="home.html">Home Page</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Galleria
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="galleria.html">Anteprima Opere</a></li>
+                                <li><a class="dropdown-item" href="guernica.html">Guernica</a></li>
+                                <li><a class="dropdown-item" href="mona.html">Gioconda</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="container-fluid">
+            <div class="row mt-4">
+                <h2>Galleria</h2>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-light table-striped-columns mt-4">
+                    <tr>
+                        <th>Nome dell'Opera</th>
+                        <th>Autore</th>
+                        <th>Descrizione</th>
+                        <th>Anteprima</th>
+                    </tr>
+                    <tr>
+                        <td>Gioconda</td>
+                        <td>Leonardo Da Vinci</td>
+                        <td class="desc">La Gioconda, nota anche come Monna Lisa, è un dipinto a olio su tavola di
+                            pioppo
+                            realizzato da Leonardo da Vinci, databile al 1503-1506</td>
+                        <td><a href="mona.html"><img src="/RipassoMuseo/Imma/mona.jpg" alt="gioconda" height="100px">
+                            </a></td>
+                    </tr>
+                    <tr>
+                        <td>Guenica</td>
+                        <td>Picasso</td>
+                        <td class="desc">Guernica è un dipinto di Pablo Picasso. L'ispirazione per l'opera, improvvisa e
+                            all'ultimo minuto, arrivò solo dopo il bombardamento di Guernica.</td>
+                        <td><a href="guernica.html"><img src="/RipassoMuseo/Imma/Guernica.jpg" alt="guernica"
+                                    width="150px"></a></td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+    </body>
+
+</html>
