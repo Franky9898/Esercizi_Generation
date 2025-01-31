@@ -23,7 +23,7 @@ function creaCard(settore) {
     let divPrincipale = document.getElementById("contenitore")
     for (let dipendente in settore) {
         //div iniziale
-        let divCard = document.createElement("div");
+        let divCard = document.createElement("div"); 
         divCard.classList.add("card");
         divCard.style = "width: 18rem;"
         divPrincipale.appendChild(divCard);
