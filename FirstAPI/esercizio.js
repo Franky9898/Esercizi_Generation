@@ -1,17 +1,21 @@
 
 
-function tuttiPosts() {
-    fetch('https://jsonplaceholder.typicode.com/posts')
-        .then(response => response.json())
-        .then(json => {
-            console.log(json);
-            displayPosts(json);
-        })
+function tuttiPosts()
+{
+  fetch('https://jsonplaceholder.typicode.com/posts')
+    .then(response => response.json())
+    .then(json =>
+    {
+      console.log(json);
+      displayPosts(json);
+    })
 }
 
-function displayPosts(posts) {
-    const post = posts.map(post => {
-        return `
+function displayPosts(posts)
+{
+  const post = posts.map(post =>
+  {
+    return `
         <div class="col-md-4 mb-4">
           <div class="card">
             <div class="card-body">
@@ -22,20 +26,23 @@ function displayPosts(posts) {
           </div>
         </div>
       `;
-    }).join('');
+  }).join('');
 
-    document.getElementById("divPrincipale").innerHTML = `<div class="row">${post}</div>`;
+  document.getElementById("divPrincipale").innerHTML = `<div class="row">${post}</div>`;
 }
 
-function post3() {
-    fetch('https://jsonplaceholder.typicode.com/posts/3')
-        .then(response => response.json())
-        .then(json => {
-            postId3(json);
-        })
+function post3()
+{
+  fetch('https://jsonplaceholder.typicode.com/posts/3')
+    .then(response => response.json())
+    .then(json =>
+    {
+      postId3(json);
+    })
 }
-function postId3(post) {
-    return document.getElementById("divPrincipale").innerHTML = `
+function postId3(post)
+{
+  return document.getElementById("divPrincipale").innerHTML = `
         <div class="col-md-4 mb-4">
           <div class="card">
             <div class="card-body">
@@ -48,17 +55,21 @@ function postId3(post) {
       `;
 }
 
-function commentiPost3() {
-    fetch('https://jsonplaceholder.typicode.com/comments?postId=1')
-        .then(response => response.json())
-        .then(json => {
-            displayCommenti(json);
-        })
+function commentiPost3()
+{
+  fetch('https://jsonplaceholder.typicode.com/comments?postId=1')
+    .then(response => response.json())
+    .then(json =>
+    {
+      displayCommenti(json);
+    })
 }
 
-function displayCommenti(commenti) {
-    const commento = commenti.map(commento => {
-        return `
+function displayCommenti(commenti)
+{
+  const commento = commenti.map(commento =>
+  {
+    return `
         <div class="col-md-4 mb-4">
           <div class="card">
             <div class="card-body">
@@ -69,9 +80,9 @@ function displayCommenti(commenti) {
           </div>
         </div>
       `;
-    }).join('');
+  }).join('');
 
-    document.getElementById("divPrincipale").innerHTML = `<div class="row">${commento}</div>`;
+  document.getElementById("divPrincipale").innerHTML = `<div class="row">${commento}</div>`;
 }
 
 

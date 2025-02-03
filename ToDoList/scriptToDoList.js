@@ -1,9 +1,11 @@
-document.getElementById("aggiungi").addEventListener("click", function (e) {
+document.getElementById("aggiungi").addEventListener("click", function (e)
+{
     e.preventDefault(); // Previene refresh form
     aggiungiTask();
 });
 
-function aggiungiTask() {
+function aggiungiTask()
+{
     let lista = document.getElementById("lista");
     let elementoLista = creaElementoLista();
     let bottone = creaBottoneRimuovi(elementoLista);
@@ -11,7 +13,8 @@ function aggiungiTask() {
     lista.appendChild(elementoLista);
 }
 
-function creaElementoLista() {
+function creaElementoLista()
+{
     let elemento = document.createElement("li");
     let dentroElemento = document.createTextNode(testoNota());
     elemento.appendChild(dentroElemento);
@@ -19,20 +22,23 @@ function creaElementoLista() {
     return elemento;
 }
 
-function creaBottoneRimuovi(elementoLista) {
+function creaBottoneRimuovi(elementoLista)
+{
     let button = document.createElement("button");
     let dentro = document.createTextNode("Rimuovi");
     button.appendChild(dentro);
     button.classList.add("btn", "btn-dark");
     button.style.cssFloat = "right";
     button.type = "button";
-    button.addEventListener("click", function () {
+    button.addEventListener("click", function ()
+    {
         elementoLista.remove();
     });
     return button;
 }
 
-function testoNota() {
+function testoNota()
+{
     let nota = document.getElementById("nota");
     return nota.value.trim()
 }
